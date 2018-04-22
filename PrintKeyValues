@@ -1,0 +1,20 @@
+sternbilder = {"name":"gb","abk":"UMa","sterne":[{"KN":12345,"HK":2},{"KN":21345,"HK":1}]}
+star = [{"KN":12345,"HK":2},{"KN":21345,"HK":1}]
+ 
+print star
+print star[1]
+print star[1]["HK"]
+print star[1].items()
+ 
+for i in star[1].items():
+	print i
+ 
+print  
+ 
+print sternbilder
+print sternbilder.keys()
+print sternbilder.values()
+print sternbilder["sterne"]
+print sternbilder["sterne"][0]
+print sternbilder["sterne"][1].values()
+print sternbilder["sterne"][0]["KN"]
