@@ -1,0 +1,14 @@
+d = {"A":["B","E"], "B":["A","E"],"E":["A","B", "C","D"]}
+def kanten(d):
+	print("Kanten")
+	kanten = []
+	for k in d:
+		for element in d[k]:
+			temp = k+ " & " +element
+			tempinverse = element+ " & " +k
+			if((temp not in kanten) and (tempinverse not in kanten)):
+				kanten.append(temp)
+				print (temp)
+ 
+ 
+kanten(d)	
