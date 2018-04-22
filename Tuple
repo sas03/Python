@@ -1,0 +1,12 @@
+#Tuple
+#- Round bracket syntax
+#- Immutable
+#- A little bit faster than list
+value = (1,2,3)
+print value[1]
+print ("foo","bar",True)+value
+ 
+try:
+	print value[1]+"me"
+except:
+	print "not working"
