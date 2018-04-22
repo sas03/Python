@@ -1,0 +1,9 @@
+class sternbilder:
+	pass
+ 
+sternbilder = {"name":"gb","abk":"UMa","sterne":[{"KN":12345,"HK":2},{"DL":28,"KN":4242,"HK":-1}]}
+ 
+def ausgabe(sternbilder):
+	print sternbilder["name"]
+ 
+ausgabe(sternbilder)
