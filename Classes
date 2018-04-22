@@ -1,0 +1,15 @@
+class Lok():
+	def __init__(self, farbe = ""):
+		self.farbe = farbe
+class Opa():
+	#Lok *besitz[10] = 0
+	def __init__(self, alter = 0):
+		self.alter = alter
+		self.besitz = []
+def main():
+	mein = Lok("rote")
+	mein2 = Lok("schwarz")
+	dein = Opa(88)
+	dein.besitz.append(mein)
+	#dein.besitz[0] = &mein
+main()
