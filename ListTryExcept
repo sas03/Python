@@ -1,0 +1,48 @@
+def main():
+	laure = ["amen","maxim","bashface"]
+	maure = ["car","box","biscuit"]
+ 
+	print laure
+	print maure
+ 
+	zan = zip(laure, maure)
+	print zan
+ 
+	laure.append("might")
+	maure.append("haar")
+ 
+	han = zip(laure, maure)
+	print han
+ 
+	print han[0]
+	print han[2][1]
+# um gefulltes dictionary zu erzeugen
+	dictionary = dict(han)
+	print dictionary
+#mach ich irgendwas dass nicht funktioniert für "try" und bekomme "exception"
+	try:
+		print dictionary["Mixi"]
+	except:
+		print "nicht bekannt"
+ 
+	print "iteritems():"
+	for tier in dictionary.iteritems():
+		print tier, maure
+	print "iterkeys():"
+	for tier in dictionary.iterkeys():
+		print tier
+	print "itervalues():"
+	for tier in dictionary.itervalues():
+		print tier
+ 
+	anzahl = [1,3,4,44]
+	taupe = zip(maure,anzahl)
+	print taupe
+	upgrade_dict = dict(zip(laure,taupe))
+	print upgrade_dict
+ 
+	for tier, (lau, anz) in upgrade_dict.iteritems():
+		print tier, lau, anz, "mal"
+ 
+if __name__ == "__main__":
+	main()
