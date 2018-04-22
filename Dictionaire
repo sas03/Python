@@ -1,0 +1,10 @@
+dic = {"a":{1:"ampel",2:"ankel"},"b":{1:"banana",2:"break"}}
+dic2 = dic.copy()
+ 
+print dic2
+print dic["b"][2]
+ 
+dic["b"][2] = "betten"
+ 
+print dic2
+print dic["b"][2]
