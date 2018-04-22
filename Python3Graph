@@ -1,0 +1,46 @@
+def print_graph(g):
+	print("Knoten im Graph")
+	for element in g[0]:
+		print(element)
+	print(g[0])
+	print("Knoten im Graph", end=" ")
+	for element in g[0]:
+		print(element, end= " ")
+	print()
+	
+	print("Graph= ", g)
+	print("Knoten im Graph: " + ", ".join(str(i) for i in g[0]))
+	print("Kanten im Graph: ", end=" ")
+	for e in g[1]:
+		print(e, end=" ")
+
+def einfuegen(g, e):
+	if not e in g[1]:
+		print("Kante",e, "wird eingefuegt")
+		g[1].append(e)
+		for v in e:
+			if v not in g[0]:
+				print("Knoten wurde knotenliste hinzugefuegt")
+				g[0].append(v)
+	else:
+		print("Kante", e, "ist bereits in g vorhanden")
+		raise ValueError("Kante"+str(e)+"ist bereits im Graph enthalten.")
+		
+def main():
+	v = []
+	e = [(1,2),(2,3),(3,1)]
+	g = (v,e)
+	print(g)
+	v = [1,2,3]
+	
+	print_graph(g)
+	
+	einfuegen(g,(3,4))
+	print_graph(g)
+	einfuegen(g,(5,6))
+	print_graph(g)
+	try:
+		einfuegen(g,(1,2))
+	except ValueError as error:
+		print("bla",error)
+main()
