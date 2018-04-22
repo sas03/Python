@@ -1,0 +1,39 @@
+import webbrowser
+ 
+f = open('berechne.html','w')
+ 
+htmlseite = """
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="Berechne.js" type="text/javascript">
+	function berechne()
+	{
+		var a = parseInt(document.getElementById("a").value);
+		var b = parseInt(document.getElementById("b").value);
+		var s = (a+b);
+		console.log(s);
+		document.getElementById("s").innerHTML = s;
+	}
+	</script>
+</head>
+<body>
+	<h1>Willkommen bei Online berechner</h1>
+	<img src="img_fjords.jpg" alt="Error">
+	<h2>Zahlen berechnen</h2>
+	<!-- Hier Zahl eingeben -->
+	<p>Bitte Zahlen eingeben</p>
+	<p><label for="zahl1">Zahl1: <input id="a" type="number"></label></p>
+	<p><label for="zahl2">Zahl2: <input id="b" type="number></label></p>
+	<button type="button" onclick="berechne()">Berechnen</button>
+	<p id="s"></p>
+</body>"""
+ 
+ 
+f.write(htmlseite)
+f.close()
+ 
+#saved as write-html.py
+ 
+#now change path to reflect file location
+webbrowser.open_new_tab('berechne.html')
