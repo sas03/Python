@@ -1,0 +1,22 @@
+class MyClass:
+	zahl = 42 #static variable
+	string = "zeichenkette"
+	list = []
+ 
+	def do_something(self, neuezahl): # self bedeutet es ruft diese funktion nur über ein Objekt von der klasse auf
+		self.zahl = neuezahl # instanz variable
+		self.list.append(neuezahl)
+ 
+		#variable erstellen, zuweisen
+	def __init__(self, buchstabeneu='a'):
+		self.buchstabe = buchstabeneu # in einer funktion der klasse
+ 
+instanz = MyClass('z')
+instanz2 = MyClass('a') #gleiche static variable, unterschiedlich instanz variable
+print instanz2.list
+instanz.do_something(30)
+print instanz.zahl
+print instanz.buchstabe
+print instanz2.list
+ 
+#konstruktor
