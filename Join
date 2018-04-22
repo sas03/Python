@@ -1,0 +1,5 @@
+s = "-"
+seq =("abc","default","ex")
+seq1 =("abc")
+print(s.join(seq))
+print(s.join(seq1))
