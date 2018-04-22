@@ -1,0 +1,16 @@
+'''
+Created an 11.07.2017
+ 
+@author: Sumo
+'''
+graph = {"A":["B","E"],"B":["E"], "E":["A","B","C","D"]}
+ 
+def kanten(g):
+	kante = []
+	for knoten in g: # knoten ist in der liste g
+#		kante.append(knoten) # return ['A','B','E']
+		for n in g[knoten]:
+			kante.append((knoten,n)) # return Schlüßel(knoten) - Wert(n) Paar
+	return kante
+ 
+print(kanten(graph))
