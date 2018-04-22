@@ -1,0 +1,27 @@
+arc = {"cori":"hister","ext":"mst"}
+mirai = {"web":"lon", "hum":"kys"}
+ 
+dic = zip(arc, mirai)
+print dic
+ 
+oop = arc.keys()
+pom = arc.values()
+ 
+mor = mirai.keys()
+moco = mirai.values()
+ 
+ham = dict(zip(oop, moco))
+print ham
+ 
+for x in ham.iteritems():
+	print x
+ 
+ 
+ 
+#kalorie["mini"] = 34
+#print kalorie
+#Nahrungsmittel = dict()
+#Nahrungsmittel["Scho"] = 410
+#print Nahrungsmittel["Scho"]
+#Nahrungsmittel["black"] = 20
+#print Nahrungsmittel
